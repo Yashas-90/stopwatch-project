@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retro Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span class="bg-span" aria-hidden="true"></span>
+
+<div class="container">
+    <div class="panel">
+
+    <div class="title">24 STOPWATCH</div>
+
+    <div class="time-cards">
+        <div class="card">
+            <span id="min">00</span>
+        </div>
+
+        <div class="divider">:</div>
+
+        <div class="card">
+            <span id="sec">00</span>
+        </div>
+
+        <div class="divider">:</div>
+
+        <div class="card">
+            <span id="ms">00</span>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="start-button" onclick="start()">START</button>
+        <button class="stop-button" onclick="stop()">STOP</button>
+        <button class="lap-button" onclick="lap()">LAP</button>
+        <button class="reset-button" onclick="reset()">RESET</button>
+    </div>
+
+    <div class="laps" aria-live="polite" aria-atomic="true">
+        <div class="laps-header">
+            <span class="laps-title">Laps</span>
+            <button class="clear-laps" onclick="clearLaps()" aria-label="Clear laps">Clear</button>
+        </div>
+        <ol class="lap-list" id="lapList"></ol>
+    </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+ 
